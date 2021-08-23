@@ -17,15 +17,16 @@ def deposit(balance):
 def withdraw(balance):
     while True:
         amount = input("Enter amount to withdraw: ")
-        if float(amount) < float(balance):
-            if amount == "0":
-                print("No zero (0) amounts.")
-            elif amount.isdigit() and float(amount) == abs(float(amount)):
-                return float(balance) - float(amount)
+        if amount != "0":
+            if amount.isdigit() and float(amount) == abs(float(amount)):
+                if float(amount) > float(balance):
+                    print("Where are you going to get that kind of money?")
+                else:
+                    return float(balance) - float(amount)
             else:
                 print("Invalid entry.")
         else:
-            print("Where are you going to get that kind of money?")
+            print("No zero (0) amounts")
 
 
 def logout(name):

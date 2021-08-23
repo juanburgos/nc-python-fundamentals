@@ -48,10 +48,10 @@ while True:
         account.show_balance(balance)
     elif option == "2":
         balance = account.deposit(balance)
-        print(f"Current Balance: {balance:.2f}")
+        print(f"Current Balance: ${balance:.2f}")
     elif option == "3":
         balance = account.withdraw(balance)
-        print(f"Current Balance: {balance:.2f}")
+        print(f"Current Balance: ${balance:.2f}")
     elif option == "4":
         account.logout(user)
         break
