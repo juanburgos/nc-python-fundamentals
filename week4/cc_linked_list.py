@@ -32,9 +32,9 @@ class LinkedList:
             return
         else:
             new_node.next = self.head
-            self.head = new_node
-            print("Prepended new Head Node with value:", self.head.value)
-            print("Node following Head is:", self.head.next.value)
+        self.head = new_node
+        print("Prepended new Head Node with value:", self.head.value)
+        print("Node following Head is:", self.head.next.value)
 
 
 llist = LinkedList()
